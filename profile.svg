@@ -1,20 +1,17 @@
-<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <g>
-<!-- 蓝色大圆 -->
-<circle stroke="#00c0ff" fill="none" stroke-width="40" cx="200" cy="200" r="100" />
-<!-- 蓝色斜线 -->
-<line stroke="#00c0ff" fill="none" stroke-width="40" x1="100" y1="100" x2="300" y2="300" />
-<!-- 绿色旋转虚线环 -->
-<circle cx="200" cy="200" r="115"
+<circle stroke="#00c0ff" fill="none" stroke-width="10" cx="50" cy="50" r="25" />
+<line stroke="#00c0ff" fill="none" stroke-width="10" x1="25" y1="25" x2="75" y2="75" />
+<circle cx="50" cy="50" r="28.75"
 fill="none"
 stroke="#00FF00"
-stroke-width="10"
+stroke-width="2.5"
 stroke-linecap="round"
-stroke-dasharray="150 75">
+stroke-dasharray="37.5 18.75">
 <animateTransform attributeName="transform"
 type="rotate"
-from="0 200 200"
-to="360 200 200"
+from="0 50 50"
+to="360 50 50"
 dur="1.2s"
 repeatCount="indefinite" />
 </circle>
