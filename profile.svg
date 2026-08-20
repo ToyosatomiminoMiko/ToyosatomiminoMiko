@@ -1,7 +1,10 @@
-<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="300" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
 <g>
+<!-- 蓝色大圆 -->
 <circle id="blue_circle" stroke="#00c0ff" fill="none" stroke-width="80" cx="400" cy="400" r="200" />
+<!-- 蓝色斜线 -->
 <line id="slash" stroke="#00c0ff" fill="none" stroke-width="80" x1="200" y1="200" x2="600" y2="600" />
+<!-- 绿色旋转虚线环 -->
 <circle cx="400" cy="400" r="230"
 fill="none"
 stroke="#00FF00"
