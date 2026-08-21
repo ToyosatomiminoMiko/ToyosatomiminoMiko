@@ -20,8 +20,8 @@
             /* 背景完全透明,无任何颜色 */
             }
             .cube {
-            width: 75px;          /* 立方体尺寸(缩小一半) */
-            height: 75px;
+            width: 100px;          /* 立方体尺寸(缩小一半) */
+            height: 100px;
             position: relative;
             transform-style: preserve-3d;
             animation: spin 8s linear infinite; /* 旋转速度可调 */
@@ -30,17 +30,17 @@
             position: absolute;
             width: 50px;          /* 与 .cube 一致 */
             height: 50px;
-            border: 1px solid #fff;  /* 边框粗细和颜色可调 */
+            border: 2px solid #fff;  /* 边框粗细和颜色可调 */
             opacity: 0.85;        /* 透明度可调(0..1) */
             backface-visibility: visible;
             }
-            /* 各面平移距离 = 边长的一半 37.5px */
-            .front  { background: rgba(255,0,0,0.7); transform: translateZ(37.5px); }
-            .back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(37.5px); }
-            .left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(37.5px); }
-            .right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(37.5px); }
-            .top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(37.5px); }
-            .bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(37.5px); }
+            /* 各面平移距离 = 边长的一半 50px */
+            .front  { background: rgba(255,0,0,0.7); transform: translateZ(50px); }
+            .back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(50px); }
+            .left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(50px); }
+            .right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(50px); }
+            .top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(50px); }
+            .bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(50px); }
 
             @keyframes spin {
             0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
