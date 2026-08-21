@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="200" height="200">
 <defs>
 <style>
 .scene {
@@ -7,30 +7,28 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #1a1a2e;
 }
 .cube {
-width: 150px;
-height: 150px;
+width: 100px;
+height: 100px;
 position: relative;
 transform-style: preserve-3d;
-/* 无透视：父容器不设 perspective，默认正交投影 */
 animation: spin 8s linear infinite;
 }
 .face {
 position: absolute;
-width: 150px;
-height: 150px;
+width: 100px;
+height: 100px;
 border: 2px solid #fff;
 opacity: 0.85;
 backface-visibility: visible;
 }
-.front  { background: rgba(255,0,0,0.7); transform: translateZ(75px); }
-.back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(75px); }
-.left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(75px); }
-.right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(75px); }
-.top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(75px); }
-.bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(75px); }
+.front  { background: rgba(255,0,0,0.7); transform: translateZ(50px); }
+.back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(50px); }
+.left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(50px); }
+.right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(50px); }
+.top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(50px); }
+.bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(50px); }
 
 @keyframes spin {
 0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
@@ -39,7 +37,6 @@ backface-visibility: visible;
 </style>
 </defs>
 
-<!-- 使用 foreignObject 嵌入 HTML 内容 -->
 <foreignObject x="0" y="0" width="400" height="400">
 <div xmlns="http://www.w3.org/1999/xhtml" class="scene">
 <div class="cube">
