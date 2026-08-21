@@ -28,8 +28,8 @@
             }
             .face {
             position: absolute;
-            width: 50px;          /* 与 .cube 一致 */
-            height: 50px;
+            width: 100px;          /* 与 .cube 一致 */
+            height: 100px;
             border: 2px solid #fff;  /* 边框粗细和颜色可调 */
             opacity: 0.85;        /* 透明度可调(0..1) */
             backface-visibility: visible;
