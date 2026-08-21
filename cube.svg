@@ -1,65 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100" height="100">
-  <!-- ===== 可调整参数说明 ===== -->
-  <!-- 1. SVG整体显示尺寸：修改 width 和 height 属性（当前为100×100） -->
-  <!-- 2. 立方体大小：修改 .cube 的 width/height 以及各面的 translateZ 值（需同步） -->
-  <!-- 3. 各面颜色：修改 background 中的 rgba 值 -->
-  <!-- 4. 透明度：修改 rgba 中的 alpha 通道（0~1） -->
-  <!-- 5. 旋转速度：修改 animation 的 duration（当前8s） -->
-  <!-- 6. 边框粗细/颜色：修改 .face 的 border 属性 -->
-  <!-- 7. 背景透明已保留，无需额外设置 -->
-  <!-- ========================= -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+    <!-- ===== 可调整参数说明 ===== -->
+    <!-- 1. SVG整体显示尺寸：修改 width 和 height 属性(当前为100*100) -->
+    <!-- 2. 立方体大小：修改 .cube 的 width/height 以及各面的 translateZ 值(需同步) -->
+    <!-- 3. 各面颜色：修改 background 中的 rgba 值 -->
+    <!-- 4. 透明度：修改 rgba 中的 alpha 通道(0~1) -->
+    <!-- 5. 旋转速度：修改 animation 的 duration(当前8s) -->
+    <!-- 6. 边框粗细/颜色：修改 .face 的 border 属性 -->
+    <!-- 7. 背景透明已保留，无需额外设置 -->
+    <!-- ========================= -->
 
-  <defs>
-    <style>
-      .scene {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* 背景完全透明，无任何颜色 */
-      }
-      .cube {
-        width: 50px;          /* 立方体尺寸（缩小一半） */
-        height: 50px;
-        position: relative;
-        transform-style: preserve-3d;
-        animation: spin 8s linear infinite; /* 旋转速度可调 */
-      }
-      .face {
-        position: absolute;
-        width: 50px;          /* 与 .cube 一致 */
-        height: 50px;
-        border: 2px solid #fff;  /* 边框粗细和颜色可调 */
-        opacity: 0.85;        /* 透明度可调（0~1） */
-        backface-visibility: visible;
-      }
-      /* 各面平移距离 = 边长的一半（50/2 = 25px） */
-      .front  { background: rgba(255,0,0,0.7); transform: translateZ(25px); }
-      .back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(25px); }
-      .left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(25px); }
-      .right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(25px); }
-      .top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(25px); }
-      .bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(25px); }
+    <defs>
+        <style>
+            .scene {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 背景完全透明，无任何颜色 */
+            }
+            .cube {
+            width: 50px;          /* 立方体尺寸(缩小一半) */
+            height: 50px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spin 8s linear infinite; /* 旋转速度可调 */
+            }
+            .face {
+            position: absolute;
+            width: 50px;          /* 与 .cube 一致 */
+            height: 50px;
+            border: 1px solid #fff;  /* 边框粗细和颜色可调 */
+            opacity: 0.85;        /* 透明度可调(0~1) */
+            backface-visibility: visible;
+            }
+            /* 各面平移距离 = 边长的一半(50/2 = 25px) */
+            .front  { background: rgba(255,0,0,0.7); transform: translateZ(25px); }
+            .back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(25px); }
+            .left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(25px); }
+            .right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(25px); }
+            .top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(25px); }
+            .bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(25px); }
 
-      @keyframes spin {
-        0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-        100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
-      }
-    </style>
-  </defs>
+            @keyframes spin {
+            0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+            }
+        </style>
+    </defs>
 
-  <foreignObject x="0" y="0" width="400" height="400">
-    <div xmlns="http://www.w3.org/1999/xhtml" class="scene">
-      <div class="cube">
-        <!-- 六个面，颜色可在上面 style 中调整 -->
-        <div class="face front"></div>
-        <div class="face back"></div>
-        <div class="face left"></div>
-        <div class="face right"></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </div>
-    </div>
-  </foreignObject>
+    <foreignObject x="0" y="0" width="400" height="400">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="scene">
+            <div class="cube">
+                <!-- 六个面，颜色可在上面 style 中调整 -->
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
+    </foreignObject>
 </svg>
