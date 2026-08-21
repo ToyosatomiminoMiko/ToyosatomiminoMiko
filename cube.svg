@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="150" height="150">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100" height="100">
     <!-- ===== 可调整参数说明 ===== -->
     <!-- 1. SVG整体显示尺寸：修改 width 和 height 属性(当前为100*100) -->
     <!-- 2. 立方体大小：修改 .cube 的 width/height 以及各面的 translateZ 值(需同步) -->
@@ -20,8 +20,8 @@
             /* 背景完全透明,无任何颜色 */
             }
             .cube {
-            width: 50px;          /* 立方体尺寸(缩小一半) */
-            height: 50px;
+            width: 75px;          /* 立方体尺寸(缩小一半) */
+            height: 75px;
             position: relative;
             transform-style: preserve-3d;
             animation: spin 8s linear infinite; /* 旋转速度可调 */
@@ -34,13 +34,13 @@
             opacity: 0.85;        /* 透明度可调(0..1) */
             backface-visibility: visible;
             }
-            /* 各面平移距离 = 边长的一半(50/2 = 25px) */
-            .front  { background: rgba(255,0,0,0.7); transform: translateZ(25px); }
-            .back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(25px); }
-            .left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(25px); }
-            .right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(25px); }
-            .top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(25px); }
-            .bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(25px); }
+            /* 各面平移距离 = 边长的一半 37.5px */
+            .front  { background: rgba(255,0,0,0.7); transform: translateZ(37.5px); }
+            .back   { background: rgba(0,255,0,0.7); transform: rotateY(180deg) translateZ(37.5px); }
+            .left   { background: rgba(0,0,255,0.7); transform: rotateY(-90deg) translateZ(37.5px); }
+            .right  { background: rgba(255,255,0,0.7); transform: rotateY(90deg) translateZ(37.5px); }
+            .top    { background: rgba(0,255,255,0.7); transform: rotateX(90deg) translateZ(37.5px); }
+            .bottom { background: rgba(255,0,255,0.7); transform: rotateX(-90deg) translateZ(37.5px); }
 
             @keyframes spin {
             0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
