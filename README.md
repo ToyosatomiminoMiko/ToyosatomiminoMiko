@@ -1,3 +1,3 @@
-|*IOSTINIANOS*|```sh<br>cat /dev/random >> /dev/null<br>```|
+|*IOSTINIANOS*|`cat /dev/random >> /dev/null`|
 |:-:|:-|
 |![main](./profile.svg)|***Слышу голос, голос спрашивает строго***<br>***我听见那个声音向我严正发问***<br>***А сегодня что для завтра сделал я?***<br>***我为明天尽些什么义务?***|
