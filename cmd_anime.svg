@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="48" viewBox="0 0 360 48">
+  <defs>
+    <!-- CRT 噪点 + 轻微模糊 -->
+    <filter id="crt" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.1" numOctaves="1" seed="2" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.08  0 0 0 0 0.3  0 0 0 0 0.08  0 0 0 0.1 0"
+        result="crtNoise" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="crtNoise" />
+      </feMerge>
+    </filter>
+
+    <!-- 逐字显示用的裁剪动画 -->
+    <clipPath id="reveal">
+      <rect x="10" y="0" width="0" height="48">
+        <animate attributeName="width"
+          values="20;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;310;310;310;310;310"
+          keyTimes="0.000;0.029;0.057;0.086;0.114;0.143;0.171;0.200;0.229;0.257;0.286;0.314;0.343;0.371;0.400;0.429;0.457;0.486;0.514;0.543;0.571;0.600;0.629;0.657;0.686;0.714;0.743;0.771;0.800;0.829;0.857;0.886;0.914;0.943;0.971;1.000"
+          dur="6s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- 黑色背景 -->
+  <rect width="100%" height="100%" fill="#000000" />
+
+  <!-- 命令行文字,逐字出现 -->
+  <g clip-path="url(#reveal)" filter="url(#crt)">
+    <text x="10" y="32" xml:space="preserve" font-family="'JetBrains Mono Slashed', 'Fira Code', 'Noto Sans Mono'"
+      font-size="24" font-weight="bold" fill="#00ff00" textLength="300" 
+      lengthAdjust="spacingAndGlyphs">$ cat /dev/random >> /dev/null</text>
+  </g>
+
+  <!-- 下划线方块光标,随输入移动并闪烁 -->
+  <rect x="10" y="32" width="10" height="4" fill="#00ff00">
+    <animate attributeName="x"
+      values="30;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280;290;300;310;310;310;310;310;310;310"
+      keyTimes="0.000;0.029;0.057;0.086;0.114;0.143;0.171;0.200;0.229;0.257;0.286;0.314;0.343;0.371;0.400;0.429;0.457;0.486;0.514;0.543;0.571;0.600;0.629;0.657;0.686;0.714;0.743;0.771;0.800;0.829;0.857;0.886;0.914;0.943;0.971;1.000"
+      dur="6s" repeatCount="indefinite" calcMode="discrete" />
+    <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.8s" repeatCount="indefinite" />
+  </rect>
+</svg>
